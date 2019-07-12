@@ -1,34 +1,24 @@
 <div class="" style="text-align:center">
-    <h1>YYour Daily Meal List</h1>
+    <h1 style="color:mediumseagreen">Your Daily Meal List</h1>
 </div>
-<div class="row">
-    <h4>Level of Calories to Display: </h4>
+<div class="row text-center" style="background-color: light-grey">
+    <h4 style="color:mediumseagreen">Level of Calories to Display: </h4>
     <select (change)="onChange($event.target.value)">
-        <option value="all" selected="selected">Show All</option>
+        <option value="all" selected="selected" style="color:mediumseagreen">Chose Calories Levels</option>
         <option value="high">Calories > 500</option>
-        <option value="low">Calories < 500</option> </select> </div> <div class="row">
-                <div class="col-sm-3">
-                    <h4>Name:</h4>
-                </div>
-                <div class="col-sm-3">
-                    <h4>Description:</h4>
-                </div>
-                <div class="col-sm-3">
-                    <h4>Calories: </h4>
-                </div>
-                <div class="col-sm-3">
-                    <h4>Action</h4>
-                </div>
+        <option value="low">Calories 500</option>
+    </select>
 </div>
-<hr size=6>
 
-<div *ngFor="let currentMeal of childMealList | caloriesLevel:selectedCaloriesLevel">
+<hr size=3>
+
+<div *ngFor="let currentMeal of childMealList | caloriesLevel:selectedCaloriesLevel" style="background-color: mintcream">
 
     <div class="row">
         <div class="col-md-3">
             <h5>{{ currentMeal.name }}</h5>
         </div>
-        <div class="col-md-3" >
+        <div class="col-md-3">
             <h5>{{ currentMeal.description }}</h5>
         </div>
         <div class="col-md-3">
@@ -37,10 +27,14 @@
         <div class="col-md-3">
             <div class="row">
                 <div class="col-md-5">
-                    <button (click)="editButtonHasBeenClicked(currentMeal)">Edit Meal</button>
+                    <button (click)="editButtonHasBeenClicked(currentMeal)" class="btn-success">Edit Meal
+
+                    </button>
                 </div>
                 <div class="col-md-7">
-                    <button (click)="deleteButtonHasBeenClicked(currentMeal)">Delete meal</button>
+                    <button (click)="deleteButtonHasBeenClicked(currentMeal)" class="btn-danger">Delete meal
+
+                    </button>
                 </div>
             </div>
         </div>

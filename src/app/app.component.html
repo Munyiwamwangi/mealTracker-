@@ -1,22 +1,28 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container">
   <div class="container" style="text-align:center">
-    <h1>
-      Welcome to {{title}}!
+    <h1 style="color:mediumseagreen">
+      Welcome to Your Daily {{title}}
     </h1>
   </div>
   <div class="row">
-    <div class="col-sm-3" style="background-color:lavender;">
-      <app-add-meal (newMealSender)="addMeal($event)"></app-add-meal>
+    <div class="col-md-7">
+      <div class="col-sm-3" style="background-color: lightslategray">
+        <app-add-meal (newMealSender)="addMeal($event)"></app-add-meal>
+      </div>
     </div>
-    <div class="col-sm-6" style="background-color:lavenderblush;">
-      <app-display [childMealList]="MealsList" (clickSender)="showDetails($event)" (delSender)="deleteMeal($event)">
-        ></app-display>
+    <div class="col-md-5">
+      <div class="col-sm-3" style="background-color:lightslategray;">
+        <app-edit-meal [childSelectedMeal]="selectedMeal" (doneClickedSender)="finishedEditing()"></app-edit-meal>
+      </div>
+      </div>
     </div>
-    <div class="col-sm-3" style="background-color:lavender;">
-      <app-edit-meal [childSelectedMeal]="selectedMeal" (doneClickedSender)="finishedEditing()"></app-edit-meal>
+    <div class="row" style="background-color:lightslategray;" >
+      <div class="col-sm-6" style="background-color:lavenderblush;">
+        <app-display [childMealList]="MealsList" (clickSender)="showDetails($event)" (delSender)="deleteMeal($event)">
+          ></app-display>
+      </div>
     </div>
+    
 
   </div>
-
-</div>
