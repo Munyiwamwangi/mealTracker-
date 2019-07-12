@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Meal } from '../meal';
 
 @Component({
   selector: 'app-add-meal',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddMealComponent implements OnInit {
 
+  @Output() newMealSender = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
   }
+  AddClicked(MealName: string, MealDesc: string, MealCalories: number) {
+    if (MealName.length > 1) {
+      const newMealToAdd: Meal = new Meal(MealName, MealDesc, MealCalories);
+      this.newMealSender.emit(newMealToAdd);
+    } else {
+      alert('INVALID INPUT!');
+    }
 
+  }
 }
