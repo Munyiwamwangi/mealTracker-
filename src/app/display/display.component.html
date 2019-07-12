@@ -1,12 +1,12 @@
-<div class="" style="text-align:center">
+<div style="text-align:center">
     <h1 style="color:mediumseagreen">Your Daily Meal List</h1>
 </div>
 <div class="row text-center" style="background-color: light-grey">
-    <h4 style="color:mediumseagreen">Level of Calories to Display: </h4>
+    <h4 style="color:mediumseagreen">Calories Level; </h4>
     <select (change)="onChange($event.target.value)">
-        <option value="all" selected="selected" style="color:mediumseagreen">Chose Calories Levels</option>
+        <option value="all" selected="selected" style="color:mediumseagreen">Chose Calories Level</option>
         <option value="high">Calories > 500</option>
-        <option value="low">Calories 500</option>
+        <option value="low">Calories < 500</option>
     </select>
 </div>
 

@@ -15,14 +15,12 @@
       <div class="col-sm-3" style="background-color:lightslategray;">
         <app-edit-meal [childSelectedMeal]="selectedMeal" (doneClickedSender)="finishedEditing()"></app-edit-meal>
       </div>
-      </div>
     </div>
-    <div class="row" style="background-color:lightslategray;" >
-      <div class="col-sm-6" style="background-color:lavenderblush;">
-        <app-display [childMealList]="MealsList" (clickSender)="showDetails($event)" (delSender)="deleteMeal($event)">
-          ></app-display>
-      </div>
-    </div>
-    
-
   </div>
+  <div class="row" style="background-color:lightslategray;">
+    <div class="col-sm-6" style="background-color:lavenderblush;">
+      <app-display [childMealList]="MealsList" (clickSender)="showDetails($event)" (delSender)="deleteMeal($event)">
+        ></app-display>
+    </div>
+  </div>
+</div>

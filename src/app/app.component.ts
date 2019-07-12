@@ -10,9 +10,9 @@ import { Meal } from './meal';
 export class AppComponent {
   title = 'mealtracker';
   public MealsList: Meal[] = [
-    new Meal ( 'Chapati', 'Circular', 450),
-    new Meal ('Sukuma', 'Green', 780),
-    new Meal ('Chip', 'Fries', 250)
+    new Meal ( 'Pilau', 'chicken breast and veggies', 450),
+    new Meal ('Ugali', ' Fried Beef and Greens', 780),
+    new Meal ('Mukimo', 'Beef stew and vegetables', 250)
   ];
   selectedMeal: Meal = null;
   addMeal(NewMeal: Meal) {
