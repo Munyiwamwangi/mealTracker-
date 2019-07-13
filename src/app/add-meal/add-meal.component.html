@@ -1,32 +1,33 @@
-<h2 style="color:mediumseagreen">New Meal</h2>
+<h2 style="color:mediumseagreen">Record New Meal</h2>
 
 <div class="form-group">
-    <label class="control-label col-md-2" for="email">Meal:</label>
+    <label class="control-label col-md-2" for="email" style="font-size:1.0em;" >Meal:</label>
     <div class="col-md-6">
         <input class="form-control" #MealName>
     </div>
 </div>
 <div class="form-group">
-    <label class="control-label col-md-2" for="email">Description:</label>
+    <label class="control-label col-md-2" for="email"  style="font-size:1.0em;">Description:</label>
     <div class="col-md-6">
         <input class="form-control" #MealDesc>
     </div>
 </div>
 <div class="form-group">
-    <label class="control-label col-md-2" for="email">Calories:</label>
+    <label class="control-label col-md-2" for="email"  style="font-size:1.0em;">Calories:</label>
     <div class="col-md-6">
         <input class="form-control" #MealCalories>
     </div>
 </div>
 
 <div class="form-group">
-    <div class="col-md-offset-2 col-md-10">
-        <button (click)="
-      AddClicked(MealName.value, MealDesc.value, MealCalories.value);
-      MealName.value = '';
-      MealDesc.value = '';
-      MealCalories.value = '';
+   <div class="col-md-offset-2 col-md-10">
+      <button (click)="
+         AddClicked(MealName.value, MealDesc.value, MealCalories.value);
+         MealName.value = '';
+         MealDesc.value = '';
+         MealCalories.value = '';
 
-      " class="btn btn-info">Add Meal</button>
-    </div>
+         " class="btn btn-info">Add Meal
+      </button>
+   </div>
 </div>

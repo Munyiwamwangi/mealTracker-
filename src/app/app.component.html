@@ -2,25 +2,19 @@
 <div class="container">
   <div class="container" style="text-align:center">
     <h1 style="color:mediumseagreen">
-      Welcome to Your Daily {{title}}
+      Track your Diet,<br> for a Healthy Living
     </h1>
   </div>
   <div class="row">
-    <div class="col-md-7">
-      <div class="col-sm-3" style="background-color: lightslategray">
-        <app-add-meal (newMealSender)="addMeal($event)"></app-add-meal>
-      </div>
+    <div class="col-md-5" style="background-color: lightslategray">
+      <app-add-meal (newMealSender)="addMeal($event)"></app-add-meal>
     </div>
-    <div class="col-md-5">
-      <div class="col-sm-3" style="background-color:lightslategray;">
-        <app-edit-meal [childSelectedMeal]="selectedMeal" (doneClickedSender)="finishedEditing()"></app-edit-meal>
-      </div>
-    </div>
-  </div>
-  <div class="row" style="background-color:lightslategray;">
-    <div class="col-sm-6" style="background-color:lavenderblush;">
+    <div class="col-md-7" style="background-color:lightslategray;" style="background-color:lavenderblush;">
       <app-display [childMealList]="MealsList" (clickSender)="showDetails($event)" (delSender)="deleteMeal($event)">
         ></app-display>
     </div>
+  </div>
+  <div class="row" style="background-color:lightslategray;">
+    <app-edit-meal [childSelectedMeal]="selectedMeal" (doneClickedSender)="finishedEditing()"></app-edit-meal>
   </div>
 </div>

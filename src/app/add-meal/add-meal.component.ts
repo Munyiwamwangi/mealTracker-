@@ -19,7 +19,7 @@ export class AddMealComponent implements OnInit {
       const newMealToAdd: Meal = new Meal(MealName, MealDesc, MealCalories);
       this.newMealSender.emit(newMealToAdd);
     } else {
-      alert('INVALID INPUT!');
+      alert('Please enter a valid dish, fill in the three fields !');
     }
 
   }
